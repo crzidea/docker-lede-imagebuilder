@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+exec docker run --rm -it \
+  -v $PWD/.dist:/lede-imagebuilder/bin \
+  crzidea/lede-imagebuilder \
+  bash
