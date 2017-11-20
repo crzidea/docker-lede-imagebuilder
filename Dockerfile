@@ -5,11 +5,10 @@ RUN apt-get update && \
         subversion build-essential libncurses5-dev zlib1g-dev gawk git ccache gettext libssl-dev xsltproc wget unzip python && \
     apt-get clean
 
+ENV VERSION=17.01.4
 
-
-ENV VERSION=17.01.4 \
-    TARGET=ar71xx \
-    SUBTARGET=generic
+ARG TARGET=ar71xx
+ARG SUBTARGET=generic
 
 ENV package=lede-imagebuilder-$VERSION-$TARGET-$SUBTARGET.Linux-x86_64
 
